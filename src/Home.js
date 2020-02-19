@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import homeStyle from "./Home.module.css"
 import { Link } from "react-router-dom";
 
 class Home extends Component {
@@ -24,17 +25,17 @@ class Home extends Component {
       return (
         <Link
           to={`/detail/${data.id}`}
-          className="card"
+          className={homeStyle.card}
           href="/"
           key={data.id}
         >
-          <img src={data.thumbnail} alt={data.name} />
+          <img  src={data.thumbnail} alt={data.name} />
           <p>{data.title}</p>
         </Link>
       );
     });
 
-    return <div className="App">{cards}</div>;
+    return <div className={homeStyle.cardWrapper}>{cards}</div>;
   }
 }
 
