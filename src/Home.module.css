@@ -18,10 +18,12 @@
 
 .card img {
   width: 100%;
-  height: 70%;
+  height: 80%;
 }
 
 .card p {
-  color: rgb(2, 2, 2);
+  color: rgb(51, 51, 51);
   font-size: 15px;
+  font-weight: 500;
+  margin: 0px 12px;
 }
