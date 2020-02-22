@@ -20,17 +20,18 @@ class Detail extends Component {
         this.setState({ videoData: { ...response.data } });
       })
       .catch(error => {
-        console.log("error====" + error);
         this.setState({ videoData: {} });
       });
   }
   render() {
     const { state: { videoData: { title = "Not Fonts" } = {} } = {} } = this;
-    console.log(title);
 
     return (
       <div>
-        <h2>"This is Detail Page" {this.props.match.params.cardId}</h2>
+        <br/>
+        <br/>
+        <br/>
+        <h2>This is Detail Page {this.props.match.params.cardId}</h2>
         <h1>{title}</h1>
         {}
       </div>

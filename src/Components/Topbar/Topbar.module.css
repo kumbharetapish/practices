@@ -3,16 +3,24 @@
   height: 80px;
   background-color: rgb(7, 50, 78);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  top:0%;
+  z-index: 1;
 }
 
 .wrapper .link {
   font-size: 20px;
+  width: 100px;
   padding: 10px;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-style: none;
 }
 
 .wrapper .link:hover {

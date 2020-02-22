@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
-import homeStyle from "./Home.module.css"
-import { Link } from "react-router-dom";
+import homeStyle from "./Home.module.css";
+import Videocard from "../../Components/VideoCard/Videocard";
 
 class Home extends Component {
   constructor(props, context) {
@@ -21,21 +21,13 @@ class Home extends Component {
   }
 
   render() {
-    const cards = this.state.response.map(data => {
-      return (
-        <Link
-          to={`/detail/${data.id}`}
-          className={homeStyle.card}
-          href="/"
-          key={data.id}
-        >
-          <img  src={data.thumbnail} alt={data.name} />
-          <p>{data.title}</p>
-        </Link>
-      );
-    });
-
-    return <div className={homeStyle.cardWrapper}>{cards}</div>;
+    return (
+      <div className={homeStyle.cardWrapper}>
+        <br/><br/>
+        <br/><br/>
+        <Videocard response={this.state.response} />
+      </div>
+    );
   }
 }
 
