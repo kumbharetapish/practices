@@ -18,19 +18,14 @@ class Topbar extends Component {
         </Link>
         {this.props.status ? (
           <button
-            newProps={"newProps"}
             className={TopbarStyle.link}
-            onClick={this.props.handleLogin}
+            onClick={this.props.handleLogout}
           >
-            Log Out
+            Logout
           </button>
         ) : (
-          <Link
-            className={TopbarStyle.link}
-            onClick={this.props.handleLogin}
-            to="/"
-          >
-            LogIn
+          <Link  to="/login"className={TopbarStyle.link}>
+            Login
           </Link>
         )}
       </div>
